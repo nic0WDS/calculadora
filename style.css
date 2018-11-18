@@ -1,0 +1,86 @@
+.fundo{
+	width: 400px;
+	background-color: #000;
+	border: 10px solid #212121;
+}
+
+.visor{
+	border: 4px solid #fff;
+	width: 80%;
+	height: 50px;
+	border-radius: 2px;
+	font-size: 26px;
+	font-style: bold;
+	color: #001f51;
+}
+.c{
+	width: 175px;
+	color: #001f51;
+	background-color: #fff;
+	font-size: 18px;
+}
+
+.c:hover{
+	width: 175px;
+	color: #fff;
+	background-color: #0045b5;
+	font-size: 18px;
+}
+
+.cc{
+	width: 175px;
+	color: #fff;
+	background-color: #001f51;
+	font-size: 18px;
+}
+
+.cc:hover{
+	width: 175px;
+	color: #fff;
+	background-color: #0045b5;
+	font-size: 18px;
+}
+
+.ccc{
+	width: 100px;
+	color: #fff;
+	background-color: #001f51;
+	font-size: 18px;
+}
+
+.ccc:hover{
+	wwidth: 40px;
+	color: #fff;
+	background-color: #0045b5;
+	font-size: 18px;
+}
+
+.cccc{
+	width: 100px;
+	color: #fff;
+	background-color: #0e7a00;
+	font-size: 18px;
+}
+
+.cccc:hover{
+	wwidth: 40px;
+	color: #fff;
+	background-color: #18d600;
+	font-size: 18px;
+}
+
+.numero{
+	width: 40px;
+	color: #001f51;
+	background-color: #fff;
+	font-size: 22px;
+	border-radius: 100%;
+}
+
+.numero:hover{
+	width: 40px;
+	color: #fff;
+	background-color: #0045b5;
+	font-size: 22px;
+	border-radius: 100%;
+}

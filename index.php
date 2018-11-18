@@ -1,113 +1,51 @@
+<!DOCTYPE html>
 <html>
 <head>
-   <title>Calculadora</title
-<style type="text/css">
-    
-</style>
-<style type="text/css">
-.calc{
-   height: 250px;
-   width: auto;
-}
-.calc strong{
-   margin-top: 10px;
-   font-size: 15px;
-}
-
-.calc form fieldset {
-   margin: 10px auto 10px auto;
-   width: 90%;
-   border: solid black 1px;
-   padding: 3%;
-}
-
-.calc form legend {
-   padding: 6px;
-   margin: 10px;
-   border: solid black 1px;
-   font-size: 90%;
-   font-weight: bold;
-   background-color: #e8e8e8;
-}
-
-.calc form label {
-   display: block;
-   font-size: 11px;
-}
-
-.calc form input {
-   width: 100%;
-   border: solid #ccc 1px;
-   font-size: 11px;
-   margin-bottom: 10px;
-}
-
-.calc form input.botao {
-   display: block;
-   width: auto;
-   float: right;
-}
-.btn{
-   padding: 5px;
-   font-size: 15px;
-   border: 1px solid red;
-}
-.display{
-   display: none;
-}
-
-</style>
-
-
-
+	<title>Calculadora</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
+
 <body>
-<div class="calc">
-   
-      <fieldset>
-         <legend>Calculadora</legend>
-   
-         
-         <input type="text" name="valor1" id="valor1" />
-   
-         
-         <input type="text" name="valor2" id="valor2" /><br>
-   
-         bom dia
-         <input type="text" name="res" id="res" />
-           
-            <input type="radio" class="display" name="oper" value="somar" id="+"/><label class="btn" for="+" >+</label>
-            <input type="radio" class="display" name="oper" value="subtrair" id="-"/><label class="btn" for="-">-</label>
-            <input type="radio" class="display" name="oper" value="multiplicar" id="*"/><label class="btn" for="*">*</label>
-            <input type="radio" class="display" name="oper" value="dividir" id="/"/><label class="btn" for="/">/</label>
-         
-   
-         
-   
-         <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
-      </fieldset>
-    
-</div>
 
-<script type="text/javascript">
-function calcular(oper) {
-   var valor1 = document.calcform.valor1.value;
-   var valor2 = document.calcform.valor2.value;
+<form name="Calc">
+<table class="mx-auto mt-2 fundo">
+	<tr>
+		<td align="center">
+			<input type="text"  name="Input" size="16" class="visor my-3">
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+			<input type="button" name="clear" class="btn my-2 ml-5 cc" value="  c  " onClick="Calc.Input.value = ''">
+			<input type="button" name="plus" class="btn my-2 ml-2 ccc" value="  +  " onClick="Calc.Input.value += ' + '">
+			<br>
+			<input type="button" name="seven" class="btn numero my-2 ml-5" value="  7  " onClick="Calc.Input.value += '7'">
+			<input type="button" name="eight" class="btn numero my-2 ml-4" value="  8  " onClick="Calc.Input.value += '8'">
+			<input type="button" name="nine" class="btn numero my-2 ml-4 " value="  9  " onClick="Calc.Input.value += '9'">
+			<input type="button" name="div" class="btn my-2 ml-2 ccc" value="  /   " onClick="Calc.Input.value += ' / '">
 
-   if (oper == "somar") {
-      var res = parseInt(valor1) + parseInt(valor2);
-   } else {
-      if (oper == "subtrair") {
-         var res = valor1-valor2;
-      } else {
-         if (oper == "multiplicar") {
-            var res = valor1*valor2;
-         } else {
-            var res = valor1/valor2;
-         }
-      }
-   }
+			<br>
+			<input type="button" name="four" class="btn numero my-2 ml-5" value="  4  " onClick="Calc.Input.value += '4'">
+			<input type="button" name="five" class="btn numero my-2 ml-4" value="  5  " onClick="Calc.Input.value += '5'">
+			<input type="button" name="six" class="btn numero my-2 ml-4" value="  6  " onClick="Calc.Input.value += '6'">
+			<input type="button" name="times" class="btn my-2 ml-2 ccc" value="  x  " onClick="Calc.Input.value += ' * '">
 
-   document.calcform.res.value = res;
-}
-</script>
+			<br>
+			<input type="button" name="one" class="btn numero my-2 ml-5" value="  1  " onClick="Calc.Input.value += '1'">
+			<input type="button" name="two" class="btn numero my-2 ml-4" value="  2  " onClick="Calc.Input.value += '2'">
+			<input type="button" name="three" class="btn numero my-2 ml-4" value="  3  " onClick="Calc.Input.value += '3'">
+			<input type="button" name="minus" class="btn my-2 ml-2 ccc" value="  -   " onClick="Calc.Input.value += ' - '">
+
+			<br>
+			<input type="button" name="zero" class="btn my-2 c ml-5" value="  0  " onClick="Calc.Input.value += '0'">
+			<input type="button" name="DoIt" class="btn my-2 ml-2 cccc" value="  =  " onClick="Calc.Input.value = eval(Calc.Input.value)">
+
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
